@@ -5,11 +5,13 @@ import {Routing} from "./routing";
 
 function App() {
 
-  return <div className={styles.App}>
-    <CartProvider>
-      <Routing />
-    </CartProvider>
-  </div>;
+  return  (
+    <div className={styles.App}>
+      <CartProvider>
+        <Routing />
+      </CartProvider>
+    </div>
+  )
 }
 
 export default App;
