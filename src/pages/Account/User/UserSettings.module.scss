@@ -1,0 +1,35 @@
+.container {
+  flex-grow: 1;
+  border: 2px solid var(--neutral-gray-lightest);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.title {
+  font-weight: bold;
+  color: var(--neutral-gray-dark);
+  margin-bottom: 30px;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  &_item {
+    margin: 10px;
+  }
+}
+
+.changes {
+  display: flex;
+  justify-content: right;
+  &_item {
+    margin-left: 20px;
+  }
+}
+
+.divider {
+  display: block;
+  margin: 20px 0;
+  border: 1px solid #EDEEF2
+}

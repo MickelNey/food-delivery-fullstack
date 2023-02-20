@@ -1,0 +1,41 @@
+.header {
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: var(--content-width);
+    margin: 0 10px;
+  }
+
+  &_left {
+    display: flex;
+    .logo {
+      margin: 0 48px 0 0;
+    }
+  }
+  &_right {
+    display: flex;
+    align-items: center;
+  }
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  margin: 0 10px;
+}
+
+.divider {
+  display: block;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  min-width: 100vw;
+  border: 1px solid #EDEEF2
+}

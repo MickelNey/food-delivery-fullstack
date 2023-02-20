@@ -1,0 +1,5 @@
+.item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 2fr repeat(2, 1fr);
+  align-items: center
+}

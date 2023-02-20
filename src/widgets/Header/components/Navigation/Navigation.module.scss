@@ -1,0 +1,26 @@
+.nav {
+  margin: 0 24px 0 0;
+  &_container {
+    display: flex;
+    align-items: center;
+  }
+  &_item {
+    font-weight: 700;
+    color: var(--neutral-black);
+    &:hover {
+      cursor: pointer;
+      color: var(--neutral-gray);
+      transition: all 0.2s;
+    }
+    &:nth-child(1) {
+      padding: 0 40px 0 0;
+    }
+    &:nth-child(2) {
+      padding: 0 28px 0 0;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}

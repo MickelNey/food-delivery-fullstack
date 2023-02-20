@@ -1,0 +1,30 @@
+.category {
+  height: 80px;
+  width: 160px;
+  background-color: var(--primary-light);
+  color: var(--neutral-gray-dark);
+  border: 1px solid #EDEEF2;
+  font-weight: 700;
+  border-radius: 16px;
+  font-size: 13px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &_image {
+    margin: 0 0 12px 0;
+  }
+}
+
+.category:hover {
+  border: 1px solid var(--primary-default);
+  color: var(--primary-default);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.category:active {
+  transition: var(--transition);
+  border: 2px solid var(--primary-default);
+  cursor: pointer;
+}

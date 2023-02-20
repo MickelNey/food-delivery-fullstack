@@ -1,0 +1,25 @@
+:root {
+  --content-width: 1110px;
+
+  --primary-default: #4E60FF;
+  --primary-hover: #697BFF;
+  --primary-light: #F3F4FF;
+  --primary-light-hover: rgba(243, 244, 255, 0.7);
+
+  --neutral-black: #2B2B43;
+  --neutral-gray-dark: #545563;
+  --neutral-gray: #83859C;
+  --neutral-gray-light: #C7C8D2;
+  --neutral-gray-lightest: #EDEEF2;
+  --neutral-background: #F7F7F9;
+
+  --secondary-default: #FD6D22;
+  --secondary-light: #FFF3ED;
+  --secondary-light-hover: rgba(255, 243, 237, 0.7);
+
+  --error-default: #FF5C60;
+  --error-lightest: #FFF6F6;
+
+  --transition: all 0.2s;
+}
+

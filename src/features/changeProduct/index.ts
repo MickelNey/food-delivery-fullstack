@@ -1,0 +1,1 @@
+export { ChangeProduct } from './components'

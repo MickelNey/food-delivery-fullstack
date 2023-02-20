@@ -1,0 +1,19 @@
+.button {
+  height: 44px;
+  width: 100%;
+  padding: 12px;
+  color: #FF5C60;
+  border: 1px solid #FF5C60;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  &_disabled {
+    background-color: #CACFFF;
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+}

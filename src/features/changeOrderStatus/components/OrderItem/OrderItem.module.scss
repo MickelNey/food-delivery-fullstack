@@ -1,0 +1,27 @@
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 2fr repeat(2, 1fr);
+  align-items: center
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.option {
+  background: #FFFFFF;
+  border: 1px solid #EDEEF2;
+  padding: 5px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &_{
+    background-color: var(--primary-default);
+    color: var(--primary-light);
+  }
+}

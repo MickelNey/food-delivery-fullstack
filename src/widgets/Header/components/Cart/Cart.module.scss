@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+}
+
+.cart {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-light);
+  color: var(--primary-default);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart:hover {
+  border: 1px solid var(--primary-default);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.badge {
+  position: absolute;
+  top: -7%;
+  right: -7%;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-default);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 10px;
+}

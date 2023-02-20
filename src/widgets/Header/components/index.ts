@@ -1,0 +1,5 @@
+export { Cart } from './Cart/Cart'
+export { Navigation } from './Navigation/Navigation'
+export { Avatar } from './Avatar/Avatar'
+export { LoginModal } from './LoginModal/LoginModal'
+export { RegistrationModal } from './RegistrationModal/RegistrationModal'
