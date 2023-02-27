@@ -11,8 +11,8 @@
     width: var(--content-width);
     display: flex;
     align-items: center;
-
   }
+
   &_logo {
     cursor: pointer;
     width: 160px;
@@ -41,7 +41,7 @@
     width: 445px;
     .title {
       font-weight: 800;
-      font-size: 40px;
+      font-size: 30px;
       line-height: 56px;
       letter-spacing: 0.1px;
       margin: 0 0 4px 0;
