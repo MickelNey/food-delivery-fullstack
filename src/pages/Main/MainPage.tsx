@@ -11,7 +11,6 @@ import {useProducts, Product} from "entities/Product";
 import {ProductWithCart} from "features/changeProductInCart";
 
 
-
 export const MainPage = () => {
   const { data, isLoading, isError } = useProducts()
 
@@ -33,12 +32,12 @@ export const MainPage = () => {
 
       {/*<div>Nearby restaurants</div>*/}
       <div className={styles.restaurants}>
-        {data && data.map(restaurant =>
+        {data && data.map(product =>
           <Product
-            key={restaurant.id}
-            {...restaurant}
-            routePath={routePaths.menu_restaurants_id(restaurant.id)} >
-            <ProductWithCart product={restaurant} />
+            key={product.id}
+            {...product}
+            routePath={routePaths.menu_restaurants_id(product.id)} >
+            <ProductWithCart product={product} />
           </Product>
         )}
       </div>

@@ -1,13 +1,15 @@
 import React, {useState} from 'react'
 
-import {useCategories, useProducts} from "entities/Product";
+import {useProducts} from "entities/Product";
+import {useCategories} from 'entities/Category'
 import styles from './SellerSerrings.module.scss'
 
-import {CreateProductButton} from "features/createProductModal";
+import {CreateProductButton} from "features/createProduct";
 import {ChangeProduct} from "features/changeProduct";
 import {Divider} from "shared/ui";
 import {useOrders} from "entities/Order/hooks/useOrders";
 import {OrderItem} from "features/changeOrderStatus";
+import {CreateCategoryButton} from "../../../features/createCategory";
 
 export const SellerSettings = () => {
   const categories = useCategories()
@@ -39,7 +41,13 @@ export const SellerSettings = () => {
           </div>
         </div>
 
-        {categories.data && <CreateProductButton categories={categories.data} />}
+        <div className={styles.block_btns}>
+          {categories.data && <CreateProductButton categories={categories.data} />}
+
+          <div className={styles.right_btn}>
+            {categories.data && <CreateCategoryButton categories={categories.data} />}
+          </div>
+        </div>
 
       </div>
       <Divider />

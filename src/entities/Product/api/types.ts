@@ -1,7 +1,3 @@
-export interface ICategory {
-  title: string
-  imageUrl: string
-}
 
 export interface IProduct {
   title: string

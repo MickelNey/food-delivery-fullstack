@@ -16,6 +16,7 @@ export const Header = () => {
   const [registrationActive, setRegistrationActive] = useState(false)
   const { isAuth } = useAuthContext()
   const exit  = useExit()
+  const [searchValue, setSearchValue] = useState('')
 
   return (
     <>
@@ -28,7 +29,7 @@ export const Header = () => {
             </NavLink>
 
             <div>
-              <SearchInput />
+              <SearchInput onChange={(e) => setSearchValue(e.target.value)} placeholder='Search...' value={searchValue} />
             </div>
           </div>
           <div className={styles.header_right}>

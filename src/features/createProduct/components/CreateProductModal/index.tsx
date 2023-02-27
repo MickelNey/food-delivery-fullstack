@@ -3,7 +3,8 @@ import React, {useState} from "react";
 import {Modal} from "shared/components";
 import {Button, Input} from "shared/ui";
 
-import {IProduct, ICategory} from "entities/Product";
+import {IProduct} from "entities/Product";
+import {CategoryResponse} from "entities/Category";
 
 import styles from './CreateProduct.module.scss'
 import {useCreateProduct} from "../../hooks";
@@ -13,7 +14,7 @@ import config from "shared/config";
 interface CreateProductModalProps {
   createActive: boolean,
   setCreateActive: React.Dispatch<React.SetStateAction<boolean>>,
-  categories?: ICategory[]
+  categories?: CategoryResponse[]
 }
 
 export const CreateProductModal = ({ createActive, setCreateActive, categories = [] }: CreateProductModalProps) => {

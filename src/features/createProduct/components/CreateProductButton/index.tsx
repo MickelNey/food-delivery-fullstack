@@ -1,11 +1,11 @@
 import {Button} from "shared/ui";
 import React, {useState} from "react";
 import {CreateProductModal} from "../CreateProductModal";
-import {ICategory} from "entities/Product";
+import {CategoryResponse} from "entities/Category";
 
 
 type CreateProductButtonProps = {
-  categories?: ICategory[]
+  categories?: CategoryResponse[]
 }
 
 export const CreateProductButton = ({ categories }: CreateProductButtonProps) => {
