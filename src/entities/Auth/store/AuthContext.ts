@@ -1,5 +1,5 @@
 import React from 'react';
-import {AuthResponse} from '../api/types'
+import {AuthResponse} from '../api'
 import {getInitialAuthState} from "./initial";
 
 type IUser = AuthResponse

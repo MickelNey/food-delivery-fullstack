@@ -10,13 +10,14 @@ import {useAuthContext, useExit} from "entities/Auth";
 import {CartButton} from "entities/Cart";
 
 import logo from 'static/icons/logo-2.svg';
+import {useSearchProductContext} from "../../features/searchProduct/hooks";
 
 export const Header = () => {
   const [loginActive, setLoginActive] = useState(false)
   const [registrationActive, setRegistrationActive] = useState(false)
   const { isAuth } = useAuthContext()
   const exit  = useExit()
-  const [searchValue, setSearchValue] = useState('')
+  const {searchInput, setStore} = useSearchProductContext()
 
   return (
     <>
@@ -29,7 +30,11 @@ export const Header = () => {
             </NavLink>
 
             <div>
-              <SearchInput onChange={(e) => setSearchValue(e.target.value)} placeholder='Search...' value={searchValue} />
+              <SearchInput
+                onChange={(e) => setStore({ searchInput: e.target.value})}
+                placeholder='Search...'
+                value={searchInput}
+              />
             </div>
           </div>
           <div className={styles.header_right}>

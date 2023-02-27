@@ -9,10 +9,12 @@ import {LoadingSpinner} from "shared/ui";
 import {useProducts, Product} from "entities/Product";
 
 import {ProductWithCart} from "features/changeProductInCart";
+import {useSearchProductContext} from "../../features/searchProduct/hooks";
 
 
 export const MainPage = () => {
   const { data, isLoading, isError } = useProducts()
+  const { searchInput } = useSearchProductContext()
 
   if (isLoading) {
     return <LoadingSpinner />
@@ -32,7 +34,7 @@ export const MainPage = () => {
 
       {/*<div>Nearby restaurants</div>*/}
       <div className={styles.restaurants}>
-        {data && data.map(product =>
+        {data && data.filter(product => product.title.includes(searchInput)).map(product =>
           <Product
             key={product.id}
             {...product}
