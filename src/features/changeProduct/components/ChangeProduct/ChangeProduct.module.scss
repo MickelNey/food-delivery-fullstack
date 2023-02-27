@@ -1,5 +1,9 @@
-.item {
+.container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 2fr repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr repeat(2, 1fr);
   align-items: center
+}
+
+.input {
+  padding-right: 20px;
 }
