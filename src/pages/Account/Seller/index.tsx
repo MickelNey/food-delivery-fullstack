@@ -9,7 +9,7 @@ import {ChangeProduct} from "features/changeProduct";
 import {Divider} from "shared/ui";
 import {useOrders} from "entities/Order/hooks/useOrders";
 import {OrderItem} from "features/changeOrderStatus";
-import {CreateCategoryButton} from "../../../features/createCategory";
+import {CreateCategoryButton} from "features/createCategory";
 
 export const SellerSettings = () => {
   const categories = useCategories()
@@ -53,8 +53,8 @@ export const SellerSettings = () => {
       <Divider />
 
 
-      {state && <div className={styles.list}>
-        <div className={styles.item}>
+      {state && <div>
+        <div className={styles.product_item}>
           <div>title </div>
           <div>cost</div>
           <div>time (min.) </div>
@@ -68,7 +68,7 @@ export const SellerSettings = () => {
         )}
       </div>}
 
-      {!state && <div className={styles.list}>
+      {!state && <div>
         <div className={styles.item}>
           <div>order id </div>
           <div>email</div>

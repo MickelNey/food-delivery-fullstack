@@ -1,7 +1,7 @@
 import React from "react";
 import {Button, LoadingSpinner} from "shared/ui";
-import styles from './AdminSettings.module.scss'
 import {useUsers} from "entities/User";
+import styles from './AdminSettings.module.scss'
 
 export const AdminSettings = () => {
 

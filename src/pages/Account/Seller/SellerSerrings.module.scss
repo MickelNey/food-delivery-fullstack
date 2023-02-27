@@ -12,9 +12,9 @@
   margin-bottom: 10px;
 }
 
-.item {
+.product_item {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 2fr repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr repeat(2, 1fr);
   align-items: center
 }
 
