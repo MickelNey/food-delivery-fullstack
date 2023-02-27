@@ -3,9 +3,6 @@ import {useParams} from "react-router-dom";
 import {Page} from "../Page";
 import {useProduct} from "entities/Product";
 import styles from './SingleRestaurant.module.scss'
-import {ProductParams} from "../../entities/Product/ui/ProductParams/ProductParams";
-
-
 
 
 export const SingleRestaurantPage = () => {

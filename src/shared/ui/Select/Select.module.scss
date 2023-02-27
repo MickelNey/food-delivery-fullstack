@@ -8,7 +8,7 @@
   margin-bottom: 10px;
   &_active {
     border: 2px solid var(--primary-default);
-    background: #F3F4FF;
+    background: var(--primary-light);
   }
 }
 
@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #83859C;
+  color: var(--neutral-gray);
   &_active {
     color: var(--neutral-gray-lightest);
     background-color: var(--primary-default);

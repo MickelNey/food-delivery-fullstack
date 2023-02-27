@@ -15,7 +15,7 @@
   cursor: pointer;
 
   &_{
-    background-color: #4E60FF;
-    color: #CACFFF;
+    background-color: var(--primary-default);
+    color: var(--primary-thirty);
   }
 }

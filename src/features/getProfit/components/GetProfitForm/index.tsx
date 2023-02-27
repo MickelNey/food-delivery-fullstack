@@ -1,12 +1,14 @@
 import React from 'react'
 import {useGetProfit} from "../../hooks/useGetProfit";
 import {DateForm} from "shared/components";
+import {LoadingSpinner} from "shared/ui";
 
 export const GetProfitForm = () => {
 
-  const { profit, isLoading, getProfitAsync  } = useGetProfit()
+  const { profit, isLoading, getProfitAsync} = useGetProfit()
+
   if (isLoading) {
-    return <div>loading...</div>
+    return <LoadingSpinner/>
   }
 
   return (

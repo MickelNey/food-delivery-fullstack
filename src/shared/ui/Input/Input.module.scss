@@ -5,7 +5,7 @@
   margin: 0 0 4px 0;
   &_star:after {
     content: ' *';
-    color: #FF5C60;
+    color: var(--error-default);
   }
 }
 

@@ -32,22 +32,18 @@ export const MainPage = () => {
       {/*  {data.categories.map(category => <Category key={category.name}{...category} />)}*/}
       {/*</div>*/}
 
-      {/*<div>Nearby restaurants</div>*/}
       <div className={styles.restaurants}>
-        {data && data.filter(product => product.title.includes(searchInput)).map(product =>
-          <Product
-            key={product.id}
-            {...product}
-            routePath={routePaths.menu_restaurants_id(product.id)} >
-            <ProductWithCart product={product} />
-          </Product>
-        )}
+        {data && data
+          .filter(product => product.title.toLowerCase().includes(searchInput.toLowerCase()))
+          .map(product =>
+            <Product
+              key={product.id}
+              {...product}
+              routePath={routePaths.menu_restaurants_id(product.id)} >
+              <ProductWithCart product={product} />
+            </Product>
+          )}
       </div>
-
-      {/*<div className={styles.centerContainer}>*/}
-      {/*  <button className={styles.button}>Load more</button>*/}
-      {/*</div>*/}
-
     </Page>
   )
 }

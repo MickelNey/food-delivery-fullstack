@@ -33,7 +33,7 @@
       height: 82px;
       margin: 9px;
 
-      background-color: #FF5C60;
+      background-color: var(--error-default);
       border-radius: 12px;
     }
   }
@@ -86,12 +86,12 @@
       width: 16px;
       height: 16px;
       margin: 0 0 0 10px;
-      background-color: #CACFFF;
+      background-color: var(--primary-thirty);
     }
   }
   .reviews {
     width: 350px;
     min-height: 10px;
-    background-color: #CACFFF;
+    background-color: var(--primary-thirty)F;
   }
 }
