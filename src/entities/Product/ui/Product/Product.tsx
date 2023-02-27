@@ -27,8 +27,6 @@ export const Product = ({ title, imageUrl, cost, categories, children, routePath
   return (<div onClick={() => routeChange()} className={styles.restaurant}>
     <div className={styles.restaurant_logo}>
       <img className={styles.restaurant_image} src={`${config.baseUrl}${imageUrl}`}></img>
-
-      {/*{featured && <div className={styles.restaurant_badge}>FEATURED</div>}*/}
     </div>
     <div className={styles.info}>
       <div className={styles.info_elem1}>
@@ -38,7 +36,6 @@ export const Product = ({ title, imageUrl, cost, categories, children, routePath
       </div>
 
       <ProductParams time={''} minSum={cost} />
-
 
       <div className={styles.categories}>
         {categories.map((category, index) => 

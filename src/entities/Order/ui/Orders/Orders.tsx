@@ -1,6 +1,5 @@
 import React from "react";
-import {OrderResponse} from "../../api/types";
-import {Order} from "../Order/Order";
+import {OrderResponse} from "../../api";
 import styles from './Orders.module.scss'
 
 
@@ -10,13 +9,22 @@ interface OrdersProps {
 
 export const Orders = ({ orders } : OrdersProps) => {
   return (
-    <div>
-      <div className={styles.container}>
-        <div>one</div>
-        <div>two</div>
-        <div>three</div>
+    <div className={styles.order_list}>
+      <div className={styles.item}>
+        <div>order id</div>
+        <div>status</div>
+        <div>price</div>
+        <div>registration date</div>
       </div>
-      {orders.map(order => <Order key={order.id} { ...order } />)}
+
+      {orders.map(order =>
+        <div className={styles.item} key={order.id}>
+          <div>{order.id}</div>
+          <div>{order.status}</div>
+          <div>{order.price}$</div>
+          <div>{new Date(order.registrationDate).toDateString()}</div>
+        </div>
+      )}
     </div>
   )
 }
