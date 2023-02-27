@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from './RegistrationModal.module.scss'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 import {Button, Input} from "shared/ui";
 import {Modal} from "shared/components";
@@ -18,6 +19,11 @@ export const RegistrationModal = ({ active, setActive }: IRegistration) => {
   const [password, setPassword, passwordValid] = useValidation('', validRegExp.password)
   const [confirmPass, setConfirmPass, confirmPassValid] = useValidation('', validRegExp.password)
   const { registerAsync } = useRegistration()
+  const [captcha, setCaptcha] = useState(true)
+
+  const handleOnCaptchaChange = () => {
+    setCaptcha(false)
+  }
 
   const handleSubmit = async (e: any) => {
     e.preventDefault()
@@ -71,11 +77,18 @@ export const RegistrationModal = ({ active, setActive }: IRegistration) => {
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPass(e)}
       />
 
+      <ReCAPTCHA
+        sitekey='6LfC07skAAAAABga9P0K4VFThBTYAUSNFM2CSFE_'
+        onChange={() => handleOnCaptchaChange()}
+      />
+
       <Button
         className={styles.button}
-        disabled={(!passwordValid || !emailValid) || (password !== confirmPass)}
+        disabled={(!passwordValid || !emailValid || !nameValid) || (password !== confirmPass) || captcha}
         onClick={(e) => { handleSubmit(e) }}
-      >Sign Up</Button>
+      >
+        Sign Up
+      </Button>
     </Modal>
   )
 }
