@@ -18,6 +18,13 @@
   align-items: center
 }
 
+.order_item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 2fr repeat(2, 1fr);
+  margin: 10px 0;
+  align-items: center
+}
+
 .title {
   font-weight: bold;
   color: var(--neutral-gray-dark);

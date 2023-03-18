@@ -69,7 +69,7 @@ export const SellerSettings = () => {
       </div>}
 
       {!state && <div>
-        <div className={styles.item}>
+        <div className={styles.order_item}>
           <div>order id </div>
           <div>email</div>
           <div>status</div>
@@ -82,12 +82,6 @@ export const SellerSettings = () => {
           <OrderItem key={order.id} {...order}/>
         )}
       </div>}
-
-
-
-      {/*<Modal setActive={setCreateActive} active={createActive} >*/}
-      {/*  <Button onClick={() => setCreateActive(false)}>add</Button>*/}
-      {/*</Modal>*/}
 
     </div>
   )

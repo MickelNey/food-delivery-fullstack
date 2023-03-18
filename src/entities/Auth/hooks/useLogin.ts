@@ -1,7 +1,7 @@
 import {useAuthContext} from "./useAuthContext";
 import {useMutation} from "@tanstack/react-query";
-import {IUserLogin} from "../api/types";
-import {AuthService} from "../api";
+import {IUserLogin, AuthService} from "../api";
+import {} from "../api";
 
 export const useLogin = () => {
   const {setStore } = useAuthContext()

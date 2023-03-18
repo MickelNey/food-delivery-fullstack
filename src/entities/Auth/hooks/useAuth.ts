@@ -17,6 +17,6 @@ export const useAuth = () => {
     }
   })
 
-  return { isAuth, isLoading}
+  return { isAuth, isLoading }
 
 }

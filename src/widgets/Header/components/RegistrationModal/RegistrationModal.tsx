@@ -77,10 +77,10 @@ export const RegistrationModal = ({ active, setActive }: IRegistration) => {
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPass(e)}
       />
 
-      <ReCAPTCHA
+      {active && <ReCAPTCHA
         sitekey='6LfC07skAAAAABga9P0K4VFThBTYAUSNFM2CSFE_'
         onChange={() => handleOnCaptchaChange()}
-      />
+      />}
 
       <Button
         className={styles.button}

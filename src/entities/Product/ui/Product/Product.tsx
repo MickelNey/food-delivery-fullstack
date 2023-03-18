@@ -31,8 +31,6 @@ export const Product = ({ title, imageUrl, cost, categories, children, routePath
     <div className={styles.info}>
       <div className={styles.info_elem1}>
         <div>{title}</div>
-        
-        <div className={`_icon-cart ${styles.cart}`}></div>
       </div>
 
       <ProductParams time={''} minSum={cost} />

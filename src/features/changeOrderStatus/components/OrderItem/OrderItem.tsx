@@ -37,14 +37,13 @@ export const OrderItem = (order: OrderItemProps) => {
       <div>{`${new Date(order.registrationDate).toLocaleString()}`}</div>
       <BackButton onClick={() => setActive(true)}>change</BackButton>
 
-
       <Modal setActive={setActive} active={active}>
 
-        <div>{order.id}</div>
-        <div>{order.customerEmail}</div>
-        <div>{order.status}</div>
-        <div>{order.userId}</div>
-        <div>{`${new Date(order.registrationDate).toLocaleString()}`}</div>
+        <div>id: {order.id}</div>
+        <div>email: {order.customerEmail}</div>
+        <div>status: {order.status}</div>
+        <div>userId: {order.userId || 'none'}</div>
+        <div>created {`${new Date(order.registrationDate).toLocaleString()}`}</div>
 
         <div className={styles.select}>
           {statuses && statuses.map(curStatus =>

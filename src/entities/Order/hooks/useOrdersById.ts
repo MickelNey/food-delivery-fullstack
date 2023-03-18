@@ -9,7 +9,6 @@ export const useOrdersById = (id?: string) => {
         alert(error.message)
       },
       select: ({data}): OrderResponse[] => {
-        console.log(data)
         return data
       }
     }

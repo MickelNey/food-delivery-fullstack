@@ -11,6 +11,8 @@ import {CartButton} from "entities/Cart";
 
 import logo from 'static/icons/logo-2.svg';
 import {useSearchProductContext} from "../../features/searchProduct/hooks";
+import {routePaths} from "../../pages/routes";
+import {RedButton} from "../../shared/ui/Button/RedButton";
 
 export const Header = () => {
   const [loginActive, setLoginActive] = useState(false)
@@ -25,7 +27,7 @@ export const Header = () => {
         <div className={styles.header_container}>
           <div className={styles.header_left}>
 
-            <NavLink className={styles.logo} to='menu'>
+            <NavLink className={styles.logo} to={routePaths.menu}>
               <img alt='logo' src={logo}/>
             </NavLink>
 
@@ -50,9 +52,9 @@ export const Header = () => {
 
               <Avatar />
 
-              <Button className={styles.button} onClick={() => exit()}>
+              <RedButton className={styles.button} onClick={() => exit()}>
                 Exit
-              </Button>
+              </RedButton>
             </>}
 
             {!isAuth &&

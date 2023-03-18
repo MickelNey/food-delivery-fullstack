@@ -1,7 +1,7 @@
 import React from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Footer, Layout} from "widgets";
-import {AccountPage, MainPage, SingleRestaurantPage} from "pages";
+import {AccountPage, MainPage, NotFoundPage, SingleRestaurantPage} from "pages";
 import {OrdersPage} from "pages/Orders/Orders";
 import {CartPage} from "pages/Cart/Cart";
 import {AdminSettings, OwnerSettings, SellerSettings, UserSettings} from "pages/Account";
@@ -10,6 +10,7 @@ export const AuthRoutes = () => (
   <Routes>
     <Route path='/' element={<Layout />}>
       <Route index element={<Navigate to='/menu' />} />
+      <Route path='*' element={<NotFoundPage />}/>
 
       <Route path='/' element={ <Footer />}>
         <Route path='/menu' element={<MainPage />} />

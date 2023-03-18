@@ -1,11 +1,11 @@
 # Start project need to write in terminal step by step:
-# 1. npm install - install node modules
-# 2. npm start 
-# 3. server
+1. npm install
+2. npm start 
+3. server
 for using server go to https://github.com/MickelNey/food-delivery-server
 the server uses DB postgres  
 
-# 4. Описание приложения:
+# 4. App description (rus):
 Простейший интерфейс для просмотра продуктов, оформления заказов.
 Приложение включает в себя:
 1. Возможность регистрации и входа на сайт

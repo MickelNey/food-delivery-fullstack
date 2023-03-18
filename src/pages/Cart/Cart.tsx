@@ -98,7 +98,7 @@ export const CartPage: React.FC = () => {
 
           <div className={styles.page_payment}>
             <div className={styles.page_priceInfo}>
-              <div>TOTAL PRICE: {totalPrice}</div>
+              <div>TOTAL PRICE: {totalPrice}$</div>
             </div>
 
             <Button

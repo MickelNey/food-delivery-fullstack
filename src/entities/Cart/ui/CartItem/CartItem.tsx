@@ -1,6 +1,6 @@
 import React from 'react'
-import {ProductInCart} from "../../store/types";
-import config from "shared/config";
+import {ProductInCart} from "../../store/types"
+import config from "shared/config"
 import styles from './CartItem.module.scss'
 
 type CartItemProps = {
@@ -14,15 +14,13 @@ export const CartItem = ({product, children}: CartItemProps) => {
     <div className={styles.container}>
       <div className={styles.cartItem}>
         <div className={styles.cartItem_logo}>
-          <img className={styles.cartItem_image} src={`${config.baseUrl}${product.product.imageUrl}`}></img>
-
-          {/*{featured && <div className={styles.restaurant_badge}>FEATURED</div>}*/}
+          <img className={styles.cartItem_image} src={`${config.baseUrl}${product.product.imageUrl}`} />
         </div>
-        <div>{product.product.title}</div>
+        <div className={styles.cartItem_title}>{product.product.title}</div>
 
         {children}
 
-        <div className={styles.cartItem_cost}>${product.product.cost}</div>
+        <div className={styles.cartItem_cost}>{product.product.cost}$</div>
 
       </div>
       <div className={styles.divider}></div>

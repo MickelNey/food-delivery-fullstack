@@ -1,6 +1,6 @@
 import styles from "./OrderStatuses.module.scss";
 import React, {useState} from "react";
-import {EStatuses} from "../../../../entities/Order";
+import {EStatuses} from "entities/Order";
 
 
 const statuses = [

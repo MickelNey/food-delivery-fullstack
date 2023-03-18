@@ -9,13 +9,12 @@ interface RestaurantParamsProps {
 export const ProductParams = ({ time, minSum }: RestaurantParamsProps) => {
   return (
     <div className={styles.container}>
-      <div className={`_icon-clock ${styles.icon}`} />
-
+      {/*<div className={`_icon-clock ${styles.icon}`} />*/}
       <div>{time}</div>
 
       <div className={styles.point}></div>
 
-      <div>{minSum} min sum</div>
+      <div>cost {minSum}$</div>
     </div>
   )
 }
